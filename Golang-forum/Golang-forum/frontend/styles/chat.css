@@ -1,0 +1,196 @@
+/* chat.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Выравниваем элементы сверху */
+  height: 100vh;
+  flex-direction: column; /* Размещаем элементы вертикально */
+}
+
+.chat-container {
+  background: #ffffff;
+  width: 95%;
+  max-width: 720px;
+  height: 60vh; /* Чат занимает 70% высоты экрана */
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1rem auto; /* Добавляем отступ сверху и снизу */
+}
+
+.chat-header {
+  background: #2563eb;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-info {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.message {
+  background: #e0e7ff;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.message .author {
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.message .text {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.message .time {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  background: #f3f4f6;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 0.75rem 1.25rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #1d4ed8;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+.ws-status {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.25rem;
+  color: #4b5563;
+}
+
+.admin-panel {
+  background: #ffffff;
+  width: 95%; /* Занимает почти всю ширину */
+  max-width: 720px;
+  height: 35vh; /* Админ-панель занимает 25% высоты экрана */
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 1rem; /* Центрирование и отступ снизу */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  background: #2563eb;
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.admin-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0; /* Убираем лишние отступы */
+  overflow-y: auto; /* Добавляем вертикальный скролл */
+}
+
+.admin-panel tbody {
+  display: block; /* Делаем содержимое таблицы блочным */
+  max-height: 15vh; /* Ограничиваем высоту содержимого */
+  overflow-y: auto; /* Добавляем вертикальный скролл */
+}
+
+.admin-panel thead,
+.admin-panel tbody tr {
+  display: table; /* Сохраняем табличный вид для заголовков и строк */
+  width: 100%; /* Устанавливаем ширину */
+}
+
+.admin-panel th,
+.admin-panel td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.admin-panel th {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.admin-panel button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-panel button:hover {
+  background-color: #1d4ed8;
+}

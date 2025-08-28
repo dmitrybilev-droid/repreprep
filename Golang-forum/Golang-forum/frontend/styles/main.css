@@ -1,0 +1,263 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e3f0ff 0%, #b3d8fd 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.25;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  background: #60a5fa;
+  top: -120px;
+  left: -120px;
+}
+
+body::after {
+  width: 300px;
+  height: 300px;
+  background: #2563eb;
+  bottom: -100px;
+  right: -100px;
+}
+
+.auth-form,
+.chat-container {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(50, 100, 200, 0.13),
+    0 1.5px 8px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.3s;
+}
+
+.auth-form {
+  max-width: 370px;
+  margin: 90px auto;
+  padding: 36px 32px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.8s;
+}
+
+.auth-form h2 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  padding: 12px 14px;
+  border: 1.5px solid #b3d8fd;
+  border-radius: 10px;
+  font-size: 1em;
+  background: #f7fbff;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(96, 165, 250, 0.06);
+}
+
+.auth-form input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px #b3d8fd66;
+}
+
+.auth-form button {
+  padding: 12px 0;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.08em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(96, 165, 250, 0.1);
+}
+
+.auth-form button:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #38bdf8 100%);
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.13);
+}
+
+.auth-form label {
+  font-size: 1em;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.auth-form a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: text-decoration 0.2s, color 0.2s;
+  font-weight: 500;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+  color: #1e40af;
+}
+
+.chat-container {
+  max-width: 740px;
+  margin: 48px auto;
+  padding: 32px 28px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  animation: fadeIn 0.8s;
+}
+
+#profile {
+  margin-bottom: 18px;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.15em;
+  letter-spacing: 0.5px;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 8px;
+  max-height: 52vh;
+}
+
+.message {
+  margin: 14px 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f7fbff;
+  border-left: 4px solid #60a5fa;
+  box-shadow: 0 1px 6px rgba(96, 165, 250, 0.09);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  animation: fadeInUp 0.5s;
+}
+
+.author {
+  font-weight: bold;
+  color: #2563eb;
+  margin-right: 10px;
+}
+
+.text {
+  color: #222;
+  flex: 1;
+}
+
+.time {
+  font-size: 0.89em;
+  color: #999;
+  margin-left: 10px;
+}
+
+.input-area {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid #b3d8fd;
+  border-radius: 10px;
+  font-size: 1em;
+  background: #f7fbff;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(96, 165, 250, 0.06);
+}
+
+.input-area input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 2px #b3d8fd66;
+}
+
+.input-area button {
+  padding: 12px 22px;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(96, 165, 250, 0.1);
+}
+
+.input-area button:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #38bdf8 100%);
+  box-shadow: 0 4px 16px rgba(96, 165, 250, 0.13);
+}
+
+#error-message,
+.error {
+  color: #d32f2f;
+  margin-top: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1em;
+}
+
+@media (max-width: 800px) {
+  .chat-container {
+    max-width: 98vw;
+    padding: 12px 2vw;
+  }
+  .auth-form {
+    max-width: 98vw;
+    margin: 40px auto;
+    padding: 18px 2vw;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

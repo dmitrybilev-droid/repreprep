@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форум — Общий чат</title>
+    <link rel="stylesheet" href="styles/chat.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Общий чат</h2>
+        <div id="profile" class="profile-info"></div>
+      </div>
+
+      <div id="messages" class="chat-messages"></div>
+      <div id="ws-status" class="ws-status"></div>
+
+      <div class="chat-input">
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Введите сообщение..."
+          autocomplete="off"
+        />
+        <button id="send-btn">Отправить</button>
+        <button id="logout-btn" class="logout-btn">Выйти</button>
+      </div>
+    </div>
+
+    <div id="admin-panel" class="admin-panel">
+      <div class="admin-header">
+        <h3>Админ-панель</h3>
+      </div>
+      <table id="user-table">
+        <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Email</th>
+            <th>Статус</th>
+            <th>Действие</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="scripts/chat.js"></script>
+  </body>
+</html>
